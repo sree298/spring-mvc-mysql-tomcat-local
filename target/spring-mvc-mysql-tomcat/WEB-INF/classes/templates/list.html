@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>User List</title>
+</head>
+
+<body>
+    <h2>Saved Users</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <tr th:each="u : ${users}">
+            <td th:text="${u.id}"></td>
+            <td th:text="${u.name}"></td>
+            <td th:text="${u.email}"></td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- Use Thymeleaf context path aware link -->
+    <a th:href="@{/}">Add Another</a>
+
+</body>
+
+</html>
