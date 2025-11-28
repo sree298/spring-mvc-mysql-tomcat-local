@@ -2,7 +2,7 @@
 ```bash
 **mysql**
 usenaem: root
-password Sree123!@
+password root
 CREATE DATABASE userdb;
 
 ```
